@@ -74,7 +74,58 @@
                             <h3 class="panel-title">Entries</h3>
                         </div>
                         <div class="panel-body">
-                            <!-- [...] -->
+                            <div class="btn-group">
+                                <a href="#entries/list" class="btn btn-default">
+                                    <span class="glyphicon glyphicon-list"></span> List
+                                </a>
+                                <a href="#entries/search" class="btn btn-default">
+                                    <span class="glyphicon glyphicon-search"></span> Search
+                                </a>
+                            </div>
+                            <hr>
+                            <form class="form-horizontal">
+                                <fieldset>
+                                    <legend>New Entry Form</legend>
+                                    <div class="form-group">
+                                        <label class="col col-sm-2 control-label" for="title">Title</label>
+                                        <div class="col col-sm-10">
+                                            <input id="title" class="form-control" name="title" placeholder="Title" type="text"/>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col col-sm-2 control-label" for="category">Category</label>
+                                        <div class="col col-sm-10">
+                                            <select id="category" class="form-control" name="category" >
+                                            <option value="1">Category1</option>
+                                            <option value="2">Category2</option>
+                                            <option value="3">Category3</option>
+                                            <option value="4">Category4</option>
+                                            <option value="5">Category5</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col col-sm-2 control-label" for="contents">Content</label>
+                                        <div class="col col-sm-10">
+                                            <textarea id="contents" class="form-control" rows="8"></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="col col-sm-10 col-sm-offset-2">
+                                            <div class="checkbox">
+                                                <label>
+                                                    <input type="checkbox" name="publish">Publish
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="col col-sm-10 col-sm-offset-2">
+                                            <button class="btn btn-primary" name="confirm" type="submit">Confirm</button>
+                                        </div>
+                                    </div>
+                                </fieldset>
+                            </form>
                         </div>
                     </div>
                 </div>
