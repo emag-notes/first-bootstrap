@@ -48,15 +48,83 @@
 <div class="container">
     <div class="row">
         <div class="col col-sm-3">
-            <div class="well">Navigation</div>
+            <ul id="nav-tab" class="nav nav-pills nav-stacked">
+                <li class="active"><a href="#dashboard"><span class="glyphicon glyphicon-home"></span> Dashboard</a></li>
+                <li><a href="#entries"><span class="glyphicon glyphicon-pencil"></span> Entries</a></li>
+                <li><a href="#categories"><span class="glyphicon glyphicon-bookmark"></span> Categories</a></li>
+                <li><a href="#users"><span class="glyphicon glyphicon-user"></span> Users</a></li>
+                <li><a href="#reports"><span class="glyphicon glyphicon-signal"></span> Reports</a></li>
+            </ul>
         </div>
         <div class="col col-sm-9">
-            <div class="well">Tab Contents</div>
+            <div class="tab-content">
+                <div id="dashboard" class="tab-pane active">
+                    <div class="panel panel-default">
+                        <div class="panel panel-heading">
+                            <h3 class="panel-title">Dashboard</h3>
+                        </div>
+                        <div class="panel-body">
+                            <!-- [...] -->
+                        </div>
+                    </div>
+                </div>
+                <div id="entries" class="tab-pane">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">Entries</h3>
+                        </div>
+                        <div class="panel-body">
+                            <!-- [...] -->
+                        </div>
+                    </div>
+                </div>
+                <div id="categories" class="tab-pane">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">Categories</h3>
+                        </div>
+                        <div class="panel-body">
+                            <!-- [...] -->
+                        </div>
+                    </div>
+                </div>
+                <div id=users class="tab-pane">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">Users</h3>
+                        </div>
+                        <div class="panel-body">
+                            <!-- [...] -->
+                        </div>
+                    </div>
+                </div>
+                <div id="reports" class="tab-pane">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">Reports</h3>
+                        </div>
+                        <div class="panel-body">
+                            <!-- [...] -->
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </div>
 
 <script src="http://code.jquery.com/jquery.js"></script>
 <script src="js/bootstrap.min.js"></script>
+<script>
+    $('#nav-tab a').on('click', function(e) {
+        var $this = $(this);
+        e.preventDefault();
+        $this.tab('show');
+        location.hash = $this.attr('href');
+    });
+    if (location.hash) {
+        $('#nav-tab a[href=' + location.hash + ']').tab('show');
+    }
+</script>
 </body>
 </html>
